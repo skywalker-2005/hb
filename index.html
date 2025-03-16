@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Дэрэшэчка</title>
+  </head>
+  <body>
+    <a href="https://t.me/+Y_VqsCPs2qYyMGRi" style="color: aliceblue">
+      <div class="link_to_tg">Тыкни сюда</div>
+    </a>
+
+    <audio id="background-music" src="vremya.mp3"></audio>
+
+    <script>
+      window.addEventListener("load", function () {
+        // Находим аудиоэлемент
+        var audio = document.getElementById("background-music");
+
+        // Запускаем музыку
+        audio.play().catch((error) => {
+          console.log(
+            "Ошибка: музыка не может автоматически воспроизводиться без взаимодействия пользователя."
+          );
+        });
+      });
+    </script>
+
+    <button onclick="document.getElementById('background-music').play()">
+      Включить музыку
+    </button>
+
+    <img src="vi.gif" alt="GIF анимация" />
+  </body>
+</html>
