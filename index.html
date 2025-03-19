@@ -10,7 +10,7 @@
     <img
       src="vi.gif"
       alt="GIF анимация"
-      style="width: 100vw; display: block; margin: auto; padding-top: 40vw"
+      style="width: 100vw; display: block; margin: auto; padding-top: 100vh"
       onclick=" document.getElementById('clickButton').classList.remove('hidden')"
     />
     <button id="clickButton" onclick="clickCounter()" class="but hidden">
@@ -32,7 +32,7 @@
         });
       });
 
-      document.getElementById("background-music").volume = 0.3;
+      document.getElementById("background-music").volume = 0.1;
     </script>
 
     <button
@@ -72,7 +72,6 @@
       }
 
       let clicks = 0;
-      const max = 17;
 
       function clickes() {
         // Увеличиваем счётчик
@@ -125,31 +124,36 @@
         }
 
         if (clicks === 11) {
-          document.getElementById("bu").textContent = "ладно, приятно";
+          document.getElementById("bu").textContent = "ладно, приятно :)";
         }
 
         if (clicks === 12) {
-          document.getElementById("bu").textContent = "так и быть..";
+          document.getElementById("bu").textContent =
+            "я просто заставил вас кликать муахаха";
         }
 
         if (clicks === 13) {
-          document.getElementById("bu").textContent = "ловите вайба";
+          document.getElementById("bu").textContent = "так и быть..";
         }
 
         if (clicks === 14) {
-          document.getElementById("bu").textContent = "1...";
+          document.getElementById("bu").textContent = "ловите вайба";
         }
 
         if (clicks === 15) {
-          document.getElementById("bu").textContent = "2...";
+          document.getElementById("bu").textContent = "1...";
         }
 
         if (clicks === 16) {
-          document.getElementById("bu").textContent = "3...";
+          document.getElementById("bu").textContent = "2...";
         }
 
         if (clicks === 17) {
-          document.getElementById("bu").textContent = "УРА";
+          document.getElementById("bu").textContent = "3...";
+        }
+
+        if (clicks === 18) {
+          document.getElementById("bu").textContent = "УРА, иииииииуууууу";
           document.getElementById("tg").classList.remove("hidden");
         }
       }
