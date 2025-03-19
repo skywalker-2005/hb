@@ -41,3 +41,7 @@ body {
   font-family: "MyCustomFont";
   src: url("./Pixeloid.ttf") format("truetype");
 }
+
+.all {
+  padding-left: 15vw;
+}
