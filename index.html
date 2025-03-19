@@ -7,9 +7,15 @@
     <title>Дэрэшэчка</title>
   </head>
   <body>
-    <a href="https://t.me/+Y_VqsCPs2qYyMGRi" style="color: aliceblue">
-      <div class="link_to_tg">Тыкни сюда</div>
-    </a>
+    <img
+      src="vi.gif"
+      alt="GIF анимация"
+      style="width: 100vw; display: block; margin: auto; padding-top: 40vw"
+      onclick=" document.getElementById('clickButton').classList.remove('hidden')"
+    />
+    <button id="clickButton" onclick="clickCounter()" class="but hidden">
+      Нажми меня!
+    </button>
 
     <audio id="background-music" src="vremya.mp3"></audio>
 
@@ -25,12 +31,128 @@
           );
         });
       });
+
+      document.getElementById("background-music").volume = 0.3;
     </script>
 
-    <button onclick="document.getElementById('background-music').play()">
-      Включить музыку
+    <button
+      id="mus"
+      class="but hidden"
+      onclick="document.getElementById('background-music').play(); document.getElementById('bu').classList.remove('hidden')"
+    >
+      Пока не нажимай!
     </button>
 
-    <img src="vi.gif" alt="GIF анимация" />
+    <button id="bu" class="but hidden" onclick="clickes()">Сказал же!</button>
+
+    <a href="https://t.me/+Y_VqsCPs2qYyMGRi" style="color: aliceblue">
+      <div id="tg" class="link_to_tg hidden">иди сюды</div>
+    </a>
+
+    <script>
+      let clickCount = 0;
+      const maxClicks = 20;
+
+      function clickCounter() {
+        // Увеличиваем счётчик
+        clickCount++;
+
+        // Если количество кликов меньше или равно 20
+        if (clickCount <= maxClicks) {
+          // Обновляем текст кнопки
+          document.getElementById("clickButton").textContent = `${clickCount}`;
+        }
+
+        // Если кликов достигли 20, блокируем кнопку
+        if (clickCount === maxClicks) {
+          document.getElementById("clickButton").textContent =
+            "Ну плюс вайб двадцаточкаааааа!";
+          document.getElementById("mus").classList.remove("hidden");
+        }
+      }
+
+      let clicks = 0;
+      const max = 17;
+
+      function clickes() {
+        // Увеличиваем счётчик
+        clicks++;
+
+        // Если количество кликов меньше или равно 20
+
+        if (clicks === 1) {
+          document.getElementById("bu").textContent = "НЕ ЖМИ";
+        }
+
+        if (clicks === 2) {
+          document.getElementById("bu").textContent = "нуууу";
+        }
+
+        if (clicks === 3) {
+          document.getElementById("bu").textContent = "харе";
+        }
+
+        if (clicks === 4) {
+          document.getElementById("bu").textContent = "правда";
+        }
+
+        if (clicks === 5) {
+          document.getElementById("bu").textContent = "харош жмать";
+        }
+
+        if (clicks === 6) {
+          document.getElementById("bu").textContent = "эээооо";
+        }
+
+        if (clicks === 6) {
+          document.getElementById("bu").textContent = "глуховаты??";
+        }
+
+        if (clicks === 7) {
+          document.getElementById("bu").textContent = "рил глухие..";
+        }
+
+        if (clicks === 8) {
+          document.getElementById("bu").textContent = "боже, идите спать)";
+        }
+
+        if (clicks === 9) {
+          document.getElementById("bu").textContent = "алллооооо";
+        }
+
+        if (clicks === 10) {
+          document.getElementById("bu").textContent = "так хотите на др?";
+        }
+
+        if (clicks === 11) {
+          document.getElementById("bu").textContent = "ладно, приятно";
+        }
+
+        if (clicks === 12) {
+          document.getElementById("bu").textContent = "так и быть..";
+        }
+
+        if (clicks === 13) {
+          document.getElementById("bu").textContent = "ловите вайба";
+        }
+
+        if (clicks === 14) {
+          document.getElementById("bu").textContent = "1...";
+        }
+
+        if (clicks === 15) {
+          document.getElementById("bu").textContent = "2...";
+        }
+
+        if (clicks === 16) {
+          document.getElementById("bu").textContent = "3...";
+        }
+
+        if (clicks === 17) {
+          document.getElementById("bu").textContent = "УРА";
+          document.getElementById("tg").classList.remove("hidden");
+        }
+      }
+    </script>
   </body>
 </html>
