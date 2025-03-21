@@ -7,19 +7,22 @@
     <title>Дэрэшэчка</title>
   </head>
   <body>
-    <img
-      src="./20szh.gif"
+    <video
       alt="GIF анимация"
+      id="image"
+      autoplay
       style="width: 80vw; display: block; margin: auto; padding-top: 100vh"
       onclick=" document.getElementById('clickButton').classList.remove('hidden'); document.getElementById('background-music').play()"
-    />
+    >
+      <source src="0321(1).mp4" type="video/mp4" />
+    </video>
 
     <div class="all">
       <button id="clickButton" onclick="clickCounter()" class="but hidden">
         Нажми меня!
       </button>
 
-      <audio id="background-music" src="mus.mp3"></audio>
+      <audio id="background-music" src="new.mp3"></audio>
       <audio id="voice" src="voice.mp3"></audio>
 
       <button
@@ -40,6 +43,14 @@
     <script>
       let clickCount = 0;
       const maxClicks = 20;
+
+      function showButton() {
+        const button = document.getElementById("tg");
+        document.getElementById("tg").classList.remove("hidden");
+      }
+
+      // Задержка в 5 секунд перед показом кнопки
+      setTimeout(showButton, 135000);
 
       function clickCounter() {
         // Увеличиваем счётчик
@@ -142,22 +153,28 @@
 
         if (clicks === 18) {
           document.getElementById("bu").textContent = "УРА, иииииииуууууу";
-          document.getElementById("tg").classList.remove("hidden");
+          // document.getElementById("tg").classList.remove("hidden");
         }
       }
     </script>
 
     <script>
       var audio = document.getElementById("background-music");
-      var a = document.getElementById("voice");
-      a.volume = 1.0;
-      a.play();
       // Запускаем музыку
       audio.play().catch((error) => {
         console.log(
           "Ошибка: музыка не может автоматически воспроизводиться без взаимодействия пользователя."
         );
       });
+
+      const image = document.getElementById("image");
+      var a = document.getElementById("voice");
+
+      // // Добавляем обработчик события загрузки изображения
+      // image.addEventListener("load", function () {
+      //   // Воспроизводим музыку после загрузки картинки
+      //   a.play();
+      // });
     </script>
   </body>
 </html>
