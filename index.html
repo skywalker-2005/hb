@@ -8,9 +8,9 @@
   </head>
   <body>
     <img
-      src="vi.gif"
+      src="./20szh.gif"
       alt="GIF анимация"
-      style="width: 100vw; display: block; margin: auto; padding-top: 100vh"
+      style="width: 40vw; display: block; margin: auto; padding-top: 100vh"
       onclick=" document.getElementById('clickButton').classList.remove('hidden'); document.getElementById('background-music').play()"
     />
 
@@ -20,6 +20,7 @@
       </button>
 
       <audio id="background-music" src="vremya.mp3"></audio>
+      <audio id="voice" src="20szh.mov"></audio>
 
       <button
         id="mus"
@@ -147,19 +148,17 @@
     </script>
 
     <script>
-      window.addEventListener("load", function () {
-        // Находим аудиоэлемент
-        var audio = document.getElementById("background-music");
-
-        // Запускаем музыку
-        audio.play().catch((error) => {
-          console.log(
-            "Ошибка: музыка не может автоматически воспроизводиться без взаимодействия пользователя."
-          );
-        });
+      var audio = document.getElementById("background-music");
+      var a = document.getElementById("voice");
+      audio.volume = 0.06;
+      a.volume = 1.0;
+      a.play();
+      // Запускаем музыку
+      audio.play().catch((error) => {
+        console.log(
+          "Ошибка: музыка не может автоматически воспроизводиться без взаимодействия пользователя."
+        );
       });
-
-      document.getElementById("background-music").volume = 0.1;
     </script>
   </body>
 </html>
