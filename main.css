@@ -17,6 +17,10 @@
   display: none;
 }
 
+.but:active {
+  background-color: #631864;
+}
+
 .show {
   display: inline-block;
 }
